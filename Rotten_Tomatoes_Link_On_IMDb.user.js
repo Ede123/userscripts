@@ -1,9 +1,10 @@
 // ==UserScript==
 // @name        Rotten Tomatoes Link On IMDb
 // @namespace   https://github.com/Ede123/userscripts
+// @version     0.93
 // @description Adds a direct link to the corresponding Rotten Tomatoes movie description page for every IMDb movie
 // @icon        https://raw.githubusercontent.com/Ede123/userscripts/master/icons/Rotten_Tomatoes.png
-// @version     0.93
+// @author      Eduard Braun <eduard.braun2@gmx.de>
 // @license     GPL version 3 or any later version; http://www.gnu.org/copyleft/gpl.html
 // @updateURL   https://openuserjs.org/install/Ede_123/Rotten_Tomatoes_Link_On_IMDb.meta.js
 // @downloadURL https://openuserjs.org/install/Ede_123/Rotten_Tomatoes_Link_On_IMDb.user.js
