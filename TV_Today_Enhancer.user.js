@@ -2,7 +2,8 @@
 // @name        TV Today Enhancer
 // @namespace   https://github.com/Ede123/userscripts
 // @description Buttons for a quick Google / Wikipedia / IMDb and Rotten Tomatoes search. IMDb and Rotten Tomatoes ratings.
-// @version     0.95
+// @icon        https://raw.githubusercontent.com/Ede123/userscripts/master/icons/TV_Today.png
+// @version     0.96
 // @license     GPL version 3 or any later version; http://www.gnu.org/copyleft/gpl.html
 // @updateURL   https://openuserjs.org/install/Ede_123/TV_Today_Enhancer.meta.js
 // @downloadURL https://openuserjs.org/install/Ede_123/TV_Today_Enhancer.user.js
