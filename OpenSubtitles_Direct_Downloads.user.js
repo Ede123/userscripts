@@ -4,6 +4,7 @@
 // @description Creates direct download links for subtitles on opensubtitles.org
 // @include     http://www.opensubtitles.org/*
 // @version     0.9
+// @license     GPL version 3 or any later version; http://www.gnu.org/copyleft/gpl.html
 // @grant       GM_addStyle
 // ==/UserScript==
 

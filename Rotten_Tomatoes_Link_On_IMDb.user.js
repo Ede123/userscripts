@@ -3,6 +3,7 @@
 // @namespace   https://github.com/Ede123/userscripts
 // @description Adds a direct link to the corresponding Rotten Tomatoes movie description page for every IMDb movie
 // @version     0.92
+// @license     GPL version 3 or any later version; http://www.gnu.org/copyleft/gpl.html
 // @include     http://www.imdb.com/title/*
 // @grant       none
 // ==/UserScript==

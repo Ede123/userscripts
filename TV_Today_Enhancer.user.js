@@ -3,6 +3,7 @@
 // @namespace   https://github.com/Ede123/userscripts
 // @description Buttons for a quick Google / Wikipedia / IMDb and Rotten Tomatoes search. IMDb and Rotten Tomatoes ratings.
 // @version     0.95
+// @license     GPL version 3 or any later version; http://www.gnu.org/copyleft/gpl.html
 // @include     http://www.tvtoday.de/programm/*
 // @grant       GM_xmlhttpRequest
 // ==/UserScript==
