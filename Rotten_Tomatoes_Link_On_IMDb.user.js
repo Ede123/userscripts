@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        Rotten Tomatoes Link On IMDb
-// @namespace   http://userscripts.org/users/Ede123
+// @namespace   https://github.com/Ede123/userscripts
 // @description Adds a direct link to the corresponding Rotten Tomatoes movie description page for every IMDb movie
 // @version     0.92
 // @include     http://www.imdb.com/title/*

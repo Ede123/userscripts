@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        TV Today Enhancer
-// @namespace   http://userscripts.org/users/Ede123
+// @namespace   https://github.com/Ede123/userscripts
 // @description Buttons for a quick Google / Wikipedia / IMDb and Rotten Tomatoes search. IMDb and Rotten Tomatoes ratings.
 // @version     0.95
 // @include     http://www.tvtoday.de/programm/*

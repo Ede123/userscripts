@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        OpenSubtitles Direct Downloads
-// @namespace   http://userscripts.org/users/Ede123
+// @namespace   https://github.com/Ede123/userscripts
 // @description Creates direct download links for subtitles on opensubtitles.org
 // @include     http://www.opensubtitles.org/*
 // @version     0.9
