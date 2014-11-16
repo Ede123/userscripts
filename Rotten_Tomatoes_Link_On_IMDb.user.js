@@ -4,6 +4,8 @@
 // @description Adds a direct link to the corresponding Rotten Tomatoes movie description page for every IMDb movie
 // @version     0.92
 // @license     GPL version 3 or any later version; http://www.gnu.org/copyleft/gpl.html
+// @updateURL   https://openuserjs.org/install/Ede_123/Rotten_Tomatoes_Link_On_IMDb.meta.js
+// @downloadURL https://openuserjs.org/install/Ede_123/Rotten_Tomatoes_Link_On_IMDb.user.js
 // @include     http://www.imdb.com/title/*
 // @grant       none
 // ==/UserScript==
