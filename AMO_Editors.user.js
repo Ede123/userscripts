@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name        AMO Editors
 // @namespace   https://github.com/Ede123/userscripts
-// @version     0.91
-// @description Automates some things for AMO editors
+// @version     0.92
+// @description Automates and improves some things for AMO editors
 // @icon        https://raw.githubusercontent.com/Ede123/userscripts/master/icons/AMO.png
 // @author      Eduard Braun <eduard.braun2@gmx.de>
 // @license     GPL version 3 or any later version; http://www.gnu.org/copyleft/gpl.html
