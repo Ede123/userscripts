@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        AMO Editors
 // @namespace   https://github.com/Ede123/userscripts
-// @version     0.93
+// @version     0.94
 // @description Automates and improves some things for AMO editors
 // @icon        https://raw.githubusercontent.com/Ede123/userscripts/master/icons/AMO.png
 // @author      Eduard Braun <eduard.braun2@gmx.de>
@@ -51,5 +51,14 @@ addEventListener('DOMContentLoaded', function() {
 		var ua = detect.parse(navigator.userAgent);
 		inputOS.value = ua.os.name;
 		inputApp.value = ua.browser.family + " " + ua.browser.major + "." + ua.browser.minor;
+
+		// add a button to clear the fields again (e.g. on trivial updates which where not tested)
+		var button = document.createElement("a");
+		button.href = "javascript:void(0);";
+		button.textContent = "⌫";
+		button.classList.add("button");
+		button.style = "float: right; padding: 2px 5px; border-radius: 5px;";
+		button.addEventListener("click", function() {inputOS.value = ""; inputApp.value = "";});
+		inputApp.parentNode.appendChild(button);
 	}
 }, false);
