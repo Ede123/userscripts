@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        OpenSubtitles Direct Downloads
 // @namespace   https://github.com/Ede123/userscripts
-// @version     1.0
+// @version     1.0.1
 // @description Creates direct download links for subtitles on opensubtitles.org
 // @icon        https://raw.githubusercontent.com/Ede123/userscripts/master/icons/OpenSubtitles.png
 // @author      Eduard Braun <eduard.braun2@gmx.de>
@@ -18,7 +18,7 @@ GM_addStyle('#checkbox1,#checkbox2{display:none}');
 // modify button only after DOM is ready
 addEventListener('DOMContentLoaded', function() {
 	// create direct link avoiding advert page for "Open Subtitles MKV Player"
-	downloadButton = document.getElementById('bt-dwl');
+	downloadButton = document.getElementById('bt-dwl') || document.getElementById('bt-dwl-bt');
 	downloadButton.href = downloadButton.rel.replace('subtitleserve','download');
 	
 	// remove event listeners from the download button (by cloning and replacing it)
