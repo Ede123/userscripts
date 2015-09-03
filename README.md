@@ -6,7 +6,7 @@ This is a collection of user scripts I wrote. They're tested with Greasemonkey f
 You can also find these scripts in my personal script sections on [**Greasy Fork**](https://greasyfork.org/users/8551-ede-123) and [**OpenUserJS**](https://openuserjs.org/users/Ede_123/scripts).
 
 
-##Summary
+## Summary
 
 #### <img src="https://raw.githubusercontent.com/Ede123/userscripts/master/icons/AMO.png" width="16px" height="16px"> AMO Editors <sup>( [description](https://github.com/Ede123/userscripts/blob/master/AMO_Editors.md) | [source](https://github.com/Ede123/userscripts/blob/master/AMO_Editors.user.js) | [install](https://raw.githubusercontent.com/Ede123/userscripts/master/AMO_Editors.user.js) )</sup>
 

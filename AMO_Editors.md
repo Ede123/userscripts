@@ -1,4 +1,4 @@
-#About
+# About
 **_AMO Editors_** adds some additional functionality for editors on [**addons.mozilla.org (AMO)**](https://addons.mozilla.org/).
 
 Currently these are
@@ -10,5 +10,5 @@ Currently these are
 This script is *only* useful for AMO editors (the people who review add-on submissions to addons.mozilla.org).
 If you're not an AMO editor don't bother to install it!
 
-#Code
+# Code
 The source code of this user script is hosted [on GitHub](https://github.com/Ede123/userscripts). Feel free to report any issues there or submit a pull request right away.
