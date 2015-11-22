@@ -13,6 +13,11 @@ You can also find these scripts in my personal script sections on [**Greasy Fork
 Automates and improves some things for AMO editors.
 
 
+#### <img src="https://raw.githubusercontent.com/Ede123/userscripts/master/icons/GitHub.png" width="16px" height="16px"> GitHub Latest <sup>( [description](https://github.com/Ede123/userscripts/blob/master/GitHub_Latest.md) | [source](https://github.com/Ede123/userscripts/blob/master/GitHub_Latest.user.js) | [install](https://raw.githubusercontent.com/Ede123/userscripts/master/GitHub_Latest.user.js) )</sup>
+
+Always keep an eye on the latest activity of your favorite projects.
+
+
 #### <img src="https://raw.githubusercontent.com/Ede123/userscripts/master/icons/Google.png" width="16px" height="16px"> Google Cleaner <sup>( [description](https://github.com/Ede123/userscripts/blob/master/Google_Cleaner.md) | [source](https://github.com/Ede123/userscripts/blob/master/Google_Cleaner.user.js) | [install](https://raw.githubusercontent.com/Ede123/userscripts/master/Google_Cleaner.user.js) )</sup>
 
 Makes Google search page more compact and removes some unnecessary information.
