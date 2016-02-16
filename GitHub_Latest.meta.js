@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        GitHub Latest
 // @namespace   https://github.com/Ede123/userscripts
-// @version     1.0
+// @version     1.0.1
 // @description Always keep an eye on the latest activity of your favorite projects
 // @icon        https://raw.githubusercontent.com/Ede123/userscripts/master/icons/GitHub.png
 // @author      Eduard Braun <eduard.braun2@gmx.de>
