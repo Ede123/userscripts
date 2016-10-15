@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        GitHub Latest
 // @namespace   https://github.com/Ede123/userscripts
-// @version     1.0.2
+// @version     1.0.3
 // @description Always keep an eye on the latest activity of your favorite projects
 // @icon        https://raw.githubusercontent.com/Ede123/userscripts/master/icons/GitHub.png
 // @author      Eduard Braun <eduard.braun2@gmx.de>
@@ -54,6 +54,4 @@ function addLatestButton() {
 addLatestButton();
 
 // GitHub uses pjax to navigate between documents
-unsafeWindow.$(document).on("pjax:success", function() {
-	addLatestButton();
-});
+document.addEventListener('pjax:success', addLatestButton);
