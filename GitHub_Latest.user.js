@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        GitHub Latest
 // @namespace   https://github.com/Ede123/userscripts
-// @version     1.0.1
+// @version     1.0.2
 // @description Always keep an eye on the latest activity of your favorite projects
 // @icon        https://raw.githubusercontent.com/Ede123/userscripts/master/icons/GitHub.png
 // @author      Eduard Braun <eduard.braun2@gmx.de>
@@ -14,8 +14,8 @@
 // redirect link to automatically sort "your stars" by "recently active"
 document.body.addEventListener('mousedown', function(e){
 	var targ = e.target || e.srcElement;
-	if ( targ && targ.href && targ.href.match(/\/stars$/) ) {
-		targ.href = targ.href.replace(/\/stars$/, "/stars?sort=updated");
+	if ( targ && targ.href && targ.href.match(/tab=stars$/) ) {
+		targ.href = targ.href.replace(/tab=stars$/, "tab=stars&sort=updated");
 	}
 });
 
