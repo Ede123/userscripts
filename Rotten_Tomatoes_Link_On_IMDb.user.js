@@ -1,7 +1,7 @@
 ﻿// ==UserScript==
 // @name        Rotten Tomatoes Link On IMDb
 // @namespace   https://github.com/Ede123/userscripts
-// @version     1.0.1
+// @version     1.1
 // @description Adds a direct link to the corresponding Rotten Tomatoes movie description page for every IMDb movie
 // @icon        https://raw.githubusercontent.com/Ede123/userscripts/master/icons/Rotten_Tomatoes.png
 // @author      Eduard Braun <eduard.braun2@gmx.de>
@@ -12,7 +12,7 @@
 // ==/UserScript==
 
 // get IMDb movie ID
-var IMDbID_RegEx = /\/title\/tt(\d{7})\//;
+var IMDbID_RegEx = /\/title\/(tt\d{7})\//;
 var IMDbID = IMDbID_RegEx.exec(window.location.href)[1];
 
 
@@ -49,16 +49,14 @@ var addButton = function(link) {
 // get Rotten Tomatoes movie alias from Rotten Tomatoes API
 GM_xmlhttpRequest({
 	method: "GET",
-	url: "http://api.rottentomatoes.com/api/public/v1.0/movie_alias.json?" +
-	     "type=imdb" + "&id=" + IMDbID + atob("JmFwaWtleT1kYWdxZGdod2FxM2UzbXh5cnA3a21tajU="),
+	url: "http://www.omdbapi.com/?tomatoes=true&i=" + IMDbID,
 	onload: function(response) {
 		var json = JSON.parse(response.responseText);
-		if (json && json.id) {
-			var link = "http://www.rottentomatoes.com/m/" + json.id;
-			addButton(link);
+		if (json && json.tomatoURL) {
+			addButton(json.tomatoURL);
 		}
-		else if (json && json.error) {
-			console.log("Error: " + json.error);
+		else if (json && json.Error) {
+			console.log("Error: " + json.Error);
 		}
 	}
 });
