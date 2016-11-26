@@ -1,7 +1,7 @@
 ﻿// ==UserScript==
 // @name        Rotten Tomatoes Link On IMDb
 // @namespace   https://github.com/Ede123/userscripts
-// @version     1.1
+// @version     1.1.1
 // @description Adds a direct link to the corresponding Rotten Tomatoes movie description page for every IMDb movie
 // @icon        https://raw.githubusercontent.com/Ede123/userscripts/master/icons/Rotten_Tomatoes.png
 // @author      Eduard Braun <eduard.braun2@gmx.de>
@@ -52,7 +52,7 @@ GM_xmlhttpRequest({
 	url: "http://www.omdbapi.com/?tomatoes=true&i=" + IMDbID,
 	onload: function(response) {
 		var json = JSON.parse(response.responseText);
-		if (json && json.tomatoURL) {
+		if (json && json.tomatoURL && json.tomatoURL != "N/A") {
 			addButton(json.tomatoURL);
 		}
 		else if (json && json.Error) {
