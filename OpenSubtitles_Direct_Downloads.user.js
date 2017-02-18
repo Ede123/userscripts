@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        OpenSubtitles Direct Downloads
 // @namespace   https://github.com/Ede123/userscripts
-// @version     1.1
+// @version     1.1.1
 // @description Creates direct download links for subtitles on opensubtitles.org
 // @icon        https://raw.githubusercontent.com/Ede123/userscripts/master/icons/OpenSubtitles.png
 // @author      Eduard Braun <eduard.braun2@gmx.de>
@@ -15,6 +15,9 @@
 
 // remove checkboxes for "OS Download Manager"
 GM_addStyle('#checkbox1,#checkbox2{display:none}');
+
+// remove advertising asking users to sign up ("In order to watch Movies and TV Series online, please sign up for free")
+GM_addStyle('#loginBoxSubs{display:none}');
 
 
 function modifyButton() {
