@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        GitHub Latest
 // @namespace   https://github.com/Ede123/userscripts
-// @version     1.0.4
+// @version     1.0.5
 // @description Always keep an eye on the latest activity of your favorite projects
 // @icon        https://raw.githubusercontent.com/Ede123/userscripts/master/icons/GitHub.png
 // @author      Eduard Braun <eduard.braun2@gmx.de>
@@ -21,9 +21,15 @@ document.body.addEventListener('mousedown', function(e){
 
 // add a button to "latest issues"
 function addLatestButton() {
+    // do not add button again if already present
+	if (document.getElementById("latest-button")) {
+		return;
+	}
+
 	var reponav = document.getElementsByClassName("reponav");
 	if (reponav && (reponav = reponav[0])) {
 		var button = reponav.children[1].firstElementChild.cloneNode(true);
+		button.id = "latest-button"
 		button.href += "?sort=updated";
 		button.style.float = "right";
 
