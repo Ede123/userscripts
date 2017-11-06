@@ -5,7 +5,7 @@
 // @description Buttons for a quick Google / Wikipedia / IMDb and Rotten Tomatoes search. IMDb and Rotten Tomatoes ratings.
 // @icon        https://raw.githubusercontent.com/Ede123/userscripts/master/icons/TV_Today.png
 // @author      Eduard Braun <eduard.braun2@gmx.de>
-// @license     GPL version 3 or any later version; http://www.gnu.org/copyleft/gpl.html
+// @license     GPL-3.0+; http://www.gnu.org/copyleft/gpl.html
 // @include     http://www.tvtoday.de/programm/*
 // @grant       GM_xmlhttpRequest
 // ==/UserScript==
@@ -36,11 +36,11 @@ GM_xmlhttpRequest({
         // Response to JSON
         var omdbData = response.responseText;
         var omdbJSON = JSON.parse(omdbData);
-        
+
         //alert("Titel: " + omdbJSON.Title + " (" + omdbJSON.Year + ")\n" +
         //      "IMDb: " + omdbJSON.imdbRating + "\n" +
         //      "Rotten Tomatoes: " + omdbJSON.tomatoUserRating + " (" + omdbJSON.tomatoUserMeter + "%)");
-        
+
         addRatings(omdbJSON);
     }
 });
@@ -51,19 +51,19 @@ GM_xmlhttpRequest({
 function getMovieTitle() {
     var mainInfos = document.getElementsByClassName('mainInfos')[0];
     title = mainInfos.childNodes[1].innerHTML.trim();
-    
+
     var cast = document.getElementsByClassName('cast')[0];
     if (cast.childNodes[1] && cast.childNodes[1].innerHTML === "O:") {
         otitle = cast.childNodes[2].data;
         var otitle_RegExp = /(.+), .+?;/;
         otitle = otitle_RegExp.exec(otitle)[1].trim();
     }
-    
+
     otitle = otitle || title;
-    
+
     title = title.replace(/'/g, "\'");
     otitle = otitle.replace(/'/g, "\'");
-    
+
     //alert("Titel: " + title + "\n" + "Originaltitel: " + otitle)
 }
 
@@ -84,7 +84,7 @@ function addLinks() {
     var rotten = createLink("rotten",
                             "http://www.rottentomatoes.com/search/?search=" + escape(otitle),
                             "http://www.rottentomatoes.com/favicon.ico");
-    
+
     // create container for customizations
     var div = document.createElement('div');
     div.id = "myRatings";
@@ -96,12 +96,12 @@ function addLinks() {
     var spacer = document.createElement('span');
     spacer.style.padding = ".5em";
     spacer.innerHTML = "|";
-    
+
     div.appendChild(google); div.appendChild(spacer.cloneNode(true));
     div.appendChild(wiki);   div.appendChild(spacer.cloneNode(true));
     div.appendChild(imdb);   div.appendChild(spacer.cloneNode(true));
     div.appendChild(rotten);
-    
+
     // remove unneccessary "tweet" div
     document.getElementsByClassName('tweet')[0].remove();
     // add custom ratings
@@ -129,14 +129,14 @@ function addRatings(omdbJSON) {
         var omdbtitle = [];
         var ratingIMDB = [];
         var ratingRotten = [];
-        
+
         // parse title and ratings from omdb data
         omdbtitle    = omdbJSON.Title + " (" + omdbJSON.Year + ")";
         ratingIMDB   = omdbJSON.imdbRating.replace("N/A","&ndash;") + "/10";
         ratingRotten = omdbJSON.tomatoUserRating.replace("N/A","&ndash;") + "/5&nbsp;(" + omdbJSON.tomatoUserMeter.replace("N/A","&ndash;") + "%)";
         ratingIMDB   = '<a href="http://www.imdb.com/title/' + omdbJSON.imdbID + '">' + ratingIMDB + '</a>';
         ratingRotten = '<a href="http://www.rottentomatoes.com/alias?type=imdbid&s=' + omdbJSON.imdbID.substr(2) + '">' + ratingRotten + '</a>';
-        
+
         // add title
         var title_div = document.createElement('div');
         title_div.innerHTML = omdbtitle;
