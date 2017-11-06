@@ -5,7 +5,7 @@
 // @description Automates and improves some things for AMO editors
 // @icon        https://raw.githubusercontent.com/Ede123/userscripts/master/icons/AMO.png
 // @author      Eduard Braun <eduard.braun2@gmx.de>
-// @license     GPL version 3 or any later version; http://www.gnu.org/copyleft/gpl.html
+// @license     GPL-3.0+; http://www.gnu.org/copyleft/gpl.html
 // @include     https://addons.mozilla.org/*/addon/*
 // @include     https://addons.mozilla.org/*/editors/review/*
 // @include     https://addons.mozilla.org/*/files/browse/*
