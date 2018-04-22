@@ -7,6 +7,7 @@
 // @author      Eduard Braun <eduard.braun2@gmx.de>
 // @license     GPL-3.0+; http://www.gnu.org/copyleft/gpl.html
 // @include     http://www.imdb.com/title/tt*
+// @include     https://www.imdb.com/title/tt*
 // @noframes
 // @grant       GM_xmlhttpRequest
 // ==/UserScript==
