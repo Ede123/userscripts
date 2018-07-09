@@ -1,7 +1,7 @@
 ﻿// ==UserScript==
 // @name        Rotten Tomatoes Link On IMDb
 // @namespace   https://github.com/Ede123/userscripts
-// @version     1.2.1
+// @version     1.2.2
 // @description Adds a direct link to the corresponding Rotten Tomatoes movie description page for every IMDb movie
 // @icon        https://raw.githubusercontent.com/Ede123/userscripts/master/icons/Rotten_Tomatoes.png
 // @author      Eduard Braun <eduard.braun2@gmx.de>
@@ -23,7 +23,8 @@ var addButton = function(link) {
 	var RT_icon = document.createElement('img');
 	// RT_icon.src = "http://www.rottentomatoes.com/favicon.ico";
 	// RT_icon.src = "https://staticv2.rottentomatoes.com/static/images/icons/favicon.ico";
-	RT_icon.src = "https://rottentomatoes.com/static/images/icons/favicon.ico";
+	// RT_icon.src = "https://rottentomatoes.com/static/images/icons/favicon.ico";
+	RT_icon.src = "https://staticv2-4.rottentomatoes.com/static/images/icons/favicon.ico";
 	RT_icon.width = RT_icon.height = 16;
 	RT_icon.style.verticalAlign = "bottom";
 
