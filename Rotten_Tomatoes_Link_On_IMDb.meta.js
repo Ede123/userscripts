@@ -10,4 +10,5 @@
 // @include     https://www.imdb.com/title/tt*
 // @noframes
 // @grant       GM.xmlHttpRequest
+// @grant       GM_xmlhttpRequest
 // ==/UserScript==
