@@ -9,7 +9,7 @@
 // @include     http://www.imdb.com/title/tt*
 // @include     https://www.imdb.com/title/tt*
 // @noframes
-// @grant       GM_xmlhttpRequest
+// @grant       GM.xmlHttpRequest
 // ==/UserScript==
 
 // get IMDb movie ID
@@ -50,7 +50,7 @@ var addButton = function(link) {
 
 
 // get Rotten Tomatoes movie alias from Rotten Tomatoes API
-GM_xmlhttpRequest({
+GM.xmlHttpRequest({
 	method: "GET",
 	url: "http://www.omdbapi.com/?apikey=6be019fc&tomatoes=true&i=" + IMDbID,
 	onload: function(response) {
