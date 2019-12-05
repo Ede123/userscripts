@@ -10,6 +10,7 @@
 // @include     https://www.imdb.com/title/tt*
 // @noframes
 // @grant       GM.xmlHttpRequest
+// @grant       GM_xmlhttpRequest
 // ==/UserScript==
 
 // get IMDb movie ID
@@ -47,6 +48,18 @@ var addButton = function(link) {
 		subtext.appendChild(RT_link);
 	}
 };
+
+
+// --- polyfill
+// this more optimal way does not work with GM: var GM = GM || {};
+if (typeof GM == 'undefined') {
+  this.GM = {};
+  console.log('defining GM');
+}
+if (GM.xmlHttpRequest === undefined) {
+  console.log('defining GM.xmlHttpRequest');
+  GM.xmlHttpRequest = GM_xmlhttpRequest;
+}
 
 
 // get Rotten Tomatoes movie alias from Rotten Tomatoes API
