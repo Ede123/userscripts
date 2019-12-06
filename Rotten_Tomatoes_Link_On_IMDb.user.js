@@ -1,7 +1,7 @@
 ﻿// ==UserScript==
 // @name        Rotten Tomatoes Link On IMDb
 // @namespace   https://github.com/Ede123/userscripts
-// @version     1.2.2
+// @version     1.2.3
 // @description Adds a direct link to the corresponding Rotten Tomatoes movie description page for every IMDb movie
 // @icon        https://raw.githubusercontent.com/Ede123/userscripts/master/icons/Rotten_Tomatoes.png
 // @author      Eduard Braun <eduard.braun2@gmx.de>
@@ -9,6 +9,7 @@
 // @include     http://www.imdb.com/title/tt*
 // @include     https://www.imdb.com/title/tt*
 // @noframes
+// @grant       GM.xmlHttpRequest
 // @grant       GM_xmlhttpRequest
 // ==/UserScript==
 
@@ -49,8 +50,14 @@ var addButton = function(link) {
 };
 
 
+// --- polyfill
+// this more optimal way does not work with GM: var GM = GM || {};
+if (typeof GM == 'undefined') { this.GM = {}; }
+if (GM.xmlHttpRequest === undefined) { GM.xmlHttpRequest = GM_xmlhttpRequest; }
+
+
 // get Rotten Tomatoes movie alias from Rotten Tomatoes API
-GM_xmlhttpRequest({
+GM.xmlHttpRequest({
 	method: "GET",
 	url: "http://www.omdbapi.com/?apikey=6be019fc&tomatoes=true&i=" + IMDbID,
 	onload: function(response) {
