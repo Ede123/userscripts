@@ -13,15 +13,15 @@
 // ==/UserScript==
 
 GM_addStyle(
-	// hide some unnecessary stuff
-	  '.pdp-psy,' // cookie warning
-	+ '#taw,'  // privacy notifications
-	+ '#appbar' // number of results
-	+ '  {display:none !important;}'
+    // hide some unnecessary stuff
+      '.pdp-psy,' // cookie warning
+    + '#taw,'  // privacy notifications
+    + '#appbar' // number of results
+    + '  {display:none !important;}'
 
-	// reduce height of menu header
-	+ '#hdtbSum { height:35px !important; line-height:31px !important;}' // header
-	+ '.hdtb-msel { height:31px !important;}' // selected header item
-	+ '#hdtbMenus { top:unset !important;}' // search options menu
-	+ '#hdtb-more-mn { top:unset !important;}' // more menu
+    // reduce height of menu header
+    + '#hdtbSum { height:35px !important; line-height:31px !important;}' // header
+    + '.hdtb-msel { height:31px !important;}' // selected header item
+    + '#hdtbMenus { top:unset !important;}' // search options menu
+    + '#hdtb-more-mn { top:unset !important;}' // more menu
 );

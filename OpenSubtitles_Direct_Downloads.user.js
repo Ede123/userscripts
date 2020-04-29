@@ -21,13 +21,13 @@ GM_addStyle('#loginBoxSubs{display:none}');
 
 
 function modifyButton() {
-	// check for download button on page
-	var downloadButton = document.getElementById('bt-dwl') || document.getElementById('bt-dwl-bt');
-	if(!downloadButton) return;
+    // check for download button on page
+    var downloadButton = document.getElementById('bt-dwl') || document.getElementById('bt-dwl-bt');
+    if(!downloadButton) return;
 
-	// extract direct link from "dowSub()" function
-	var re1 = /product_download_url=([^'"]+)'/;
-	var downloadURL = document.body.innerHTML.match(re1)[1];
+    // extract direct link from "dowSub()" function
+    var re1 = /product_download_url=([^'"]+)'/;
+    var downloadURL = document.body.innerHTML.match(re1)[1];
     downloadURL = decodeURIComponent(downloadURL);
 
     var re2 = /(.+)\/(vrf-[a-z0-9]+)$/;
@@ -35,12 +35,12 @@ function modifyButton() {
     downloadURL = match[1].replace('download', 'download/' + match[2]);
 
     // create direct link avoiding advert page for "Open Subtitles MKV Player"
-	downloadButton.href = downloadURL;
-	downloadButton.removeAttribute("onclick");
+    downloadButton.href = downloadURL;
+    downloadButton.removeAttribute("onclick");
 
-	// remove event listeners from the download button (by cloning and replacing it)
-	// to prevent any unwanted behavior
-	downloadButton.parentNode.replaceChild(downloadButton.cloneNode(true), downloadButton);
+    // remove event listeners from the download button (by cloning and replacing it)
+    // to prevent any unwanted behavior
+    downloadButton.parentNode.replaceChild(downloadButton.cloneNode(true), downloadButton);
 }
 
 
