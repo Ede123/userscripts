@@ -5,7 +5,7 @@
 // @description Adds a direct link to the corresponding Rotten Tomatoes movie description page for every IMDb movie
 // @icon        https://raw.githubusercontent.com/Ede123/userscripts/master/icons/Rotten_Tomatoes.png
 // @author      Eduard Braun <eduard.braun2@gmx.de>
-// @license     GPL-3.0+; http://www.gnu.org/copyleft/gpl.html
+// @license     GPL-3.0-or-later; https://www.gnu.org/licenses/gpl-3.0.txt
 // @include     http://www.imdb.com/title/tt*
 // @include     https://www.imdb.com/title/tt*
 // @noframes
