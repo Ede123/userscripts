@@ -1,7 +1,7 @@
 ﻿// ==UserScript==
 // @name        Rotten Tomatoes Link On IMDb
 // @namespace   https://github.com/Ede123/userscripts
-// @version     1.2.3
+// @version     1.3
 // @description Adds a direct link to the corresponding Rotten Tomatoes movie description page for every IMDb movie
 // @icon        https://raw.githubusercontent.com/Ede123/userscripts/master/icons/Rotten_Tomatoes.png
 // @author      Eduard Braun <eduard.braun2@gmx.de>
@@ -27,25 +27,36 @@ var addButton = function(link) {
     // RT_icon.src = "https://rottentomatoes.com/static/images/icons/favicon.ico";
     RT_icon.src = "https://staticv2-4.rottentomatoes.com/static/images/icons/favicon.ico";
     RT_icon.width = RT_icon.height = 16;
-    RT_icon.style.verticalAlign = "bottom";
 
     // link
     var RT_link = document.createElement('a');
     RT_link.target = "_blank";
     RT_link.href = link;
-
     RT_link.appendChild(RT_icon);
 
-    // spacer
-    var spacer = document.createElement('span');
-    spacer.classList.add("ghost");
-    spacer.textContent = "|";
-
-    //add link to IMDb movie page
+    // add link to IMDb movie page (code for previous IMDb design)
     var subtext = document.getElementsByClassName("subtext")[0];
     if (subtext) {
+        RT_icon.style.verticalAlign = "bottom";
+
+        var spacer = document.createElement('span');
+        spacer.classList.add("ghost");
+        spacer.textContent = "|";
+
         subtext.appendChild(spacer);
         subtext.appendChild(RT_link);
+        return;
+    }
+    // add link to IMDb movie page (code for updated IMDb design)
+    var metadata = document.getElementsByClassName("ipc-inline-list")[0];
+    if (metadata) {
+        RT_icon.style.verticalAlign = "middle";
+
+        list_item = document.createElement('li');
+        list_item.classList.add("ipc-inline-list__item");
+        list_item.appendChild(RT_link);
+
+        metadata.appendChild(list_item);
     }
 };
 
