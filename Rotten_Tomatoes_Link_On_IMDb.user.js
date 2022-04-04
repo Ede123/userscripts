@@ -14,7 +14,7 @@
 // ==/UserScript==
 
 // get IMDb movie ID
-var IMDbID_RegEx = /\/title\/(tt\d{7})\//;
+var IMDbID_RegEx = /\/title\/(tt\d{7,8})\//;
 var IMDbID = IMDbID_RegEx.exec(window.location.href)[1];
 
 
